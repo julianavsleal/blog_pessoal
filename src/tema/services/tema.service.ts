@@ -12,7 +12,7 @@ constructor(
 
 async findAll(): Promise<Tema[]> {
 return await this.temaRepository.find({
-relations: {
+ relations: {
         postagem: true
     }
     });
