@@ -16,7 +16,9 @@ export class PostagemService {
 async findAll(): Promise<Postagem[]> {
     return await this.PostagemRepository.find({
         relations:{
-                tema: true }
+                tema: true,
+                usuario: true 
+            }
             });
 }
 
@@ -26,7 +28,8 @@ async findById(id: number): Promise<Postagem>{
             id,
         },
         relations:{
-                tema: true
+                tema: true,
+                usuario: true
             }
     });
 
@@ -43,7 +46,8 @@ async findByTitulo(titulo: string): Promise<Postagem[]>{
             titulo:ILike(`%${titulo}%`)
         },
         relations:{
-                tema: true
+                tema: true,
+                usuario: true
             }
     })
 }
