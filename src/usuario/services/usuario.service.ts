@@ -13,7 +13,7 @@ private usuarioRepository: Repository<Usuario>,
 private bcrypt: Bcrypt
 ){}
 
-async findByUsuario(usuario: string): Promise<Usuario | null>{
+async findByUsuario(usuario: string): Promise<Usuario | null >{
 return await this.usuarioRepository.findOne({
     where: {
         usuario: usuario
