@@ -7,7 +7,7 @@ import { Body, Controller,
         HttpCode, 
         HttpStatus, 
         Param, 
-        ParseArrayPipe, 
+        ParseIntPipe, 
         Post,
         Put,
         UseGuards
@@ -27,7 +27,7 @@ return this.PostagemService.findAll();
 
 @Get("/:id")
 @HttpCode(HttpStatus.OK)
-findById(@Param("id",ParseArrayPipe)id: number): Promise<Postagem>{
+findById(@Param("id",ParseIntPipe)id: number): Promise<Postagem>{
 return this.PostagemService.findById(id);
 }
 
@@ -51,7 +51,7 @@ update(@Body() postagem: Postagem): Promise<Postagem>{
 
 @Delete("/:id")
 @HttpCode(HttpStatus.NO_CONTENT)
-delete(@Param("id", ParseArrayPipe)id: number){
+delete(@Param("id", ParseIntPipe)id: number){
     return this.PostagemService.delete(id);
 }
 
