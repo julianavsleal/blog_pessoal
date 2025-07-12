@@ -14,7 +14,7 @@ import { JwtStrategy } from "./strategy/jwt.strategy";
 @Module({
 imports: [forwardRef(() => UsuarioModule), PassportModule, JwtModule.register({
     secret: jwtConstants.secret,
-    signOptions: {expiresIn: "1h"},
+    signOptions: {expiresIn: "10h"},
 })
 ],
 providers: [Bcrypt, AuthService, LocalStrategy, JwtStrategy],

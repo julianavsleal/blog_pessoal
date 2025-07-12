@@ -9,7 +9,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
   .setTitle("Blog Pessoal")
   .setDescription("Projeto Blog Pessoal")
-  .setContact("Juliana Vieira","www.linkedin.com/in/julianav-leal","julianavs.leal@gmail.com")
+  .setContact("Juliana Vieira","https://www.linkedin.com/in/julianav-leal/","julianavs.leal@gmail.com")
   .setVersion('1.0')
   .addBearerAuth()
   .build();
